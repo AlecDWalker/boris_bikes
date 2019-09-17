@@ -1,4 +1,4 @@
 require 'docking_station'
 describe DockingStation do
-#"Docking station should be an initialized constant"
+  it { is_expected.to respond_to :release_bike}
 end
