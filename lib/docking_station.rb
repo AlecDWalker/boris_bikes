@@ -8,13 +8,12 @@ DEFAULT_CAPACITY = 20
     @capacity = capacity
   end
 
-  def ask_for_capacity
-
-  end
-
   def release_bike
     fail 'No bikes available' if empty?
-    @bikes.pop
+    if @bikes.pop.condition == "Working"
+      @bikes.pop
+      else "Bike not working"
+    end
   end
 
   def dock(bike)
