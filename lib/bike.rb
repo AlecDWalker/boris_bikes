@@ -15,10 +15,7 @@ class Bike
   end
 
   def working?
-      if @condition == "Working"
-        true
-        else false
-      end
+      true
   end
 
 end

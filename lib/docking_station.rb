@@ -10,10 +10,8 @@ DEFAULT_CAPACITY = 20
 
   def release_bike
     fail 'No bikes available' if empty?
-    if @bikes.pop.condition == "Working"
-      @bikes.pop
-      else "Bike not working"
-    end
+    fail 'Bike not working' if @bikes[-1].broken?
+    @bikes.pop
   end
 
   def dock(bike)
